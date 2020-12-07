@@ -34,4 +34,11 @@ function displayItem3(){
     echo "photo chocolat est $photo.\n"; // prints out pic of product.
     echo "prix chocolat est $prix.\n"; // prints out prix of product.
 }
+
+function displayItem($nom,$photo,$prix)
+{
+    echo $nom; 
+    echo $photo; 
+    echo $prix;   
+}
 ?>

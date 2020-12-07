@@ -27,8 +27,11 @@ $article3 = [
      $article ['prix'];
     }
 ?>
+// exercice 4
 
 <?php include("functions.php");?>
 <?php displayItem1();?>
 <?php displayItem2();?>
 <?php displayItem3();?>
+
+<?php displayItem('fraise','image','3.5 euro')?>
