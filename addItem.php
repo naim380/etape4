@@ -6,13 +6,14 @@
     </head>
 
     <body>
+    <?php var_dump ($_POST) ?>
 
     <form method="POST" action="displayItem.php">
     <div>
         <label for="nom">Nom :</label>
         <input type="text" name="nom">
         <?php
-        if ($_POST["nom"] === "empty") {
+        if ( isset($_POST["nom"])  &&   $_POST["nom"] === "empty") {
             echo "<p>Name is empty</p>";
         }
         ?>
@@ -22,7 +23,7 @@
         <label for="prix">Prix :</label>
         <input type="text" name="prix">
         <?php
-        if ($_POST["prix"] === "empty") {
+        if ( isset ($_POST["prix"])   &&   $_POST["prix"] === "empty") {
             echo "<p>Prix is empty</p>";
         }
         ?>
@@ -32,14 +33,11 @@
         <label for="image">Image :</label>
         <input type="text" name="image">
         <?php
-        if ($_POST["image"] === "empty") {
+        if ( isset ($_POST["image"])   &&  $_POST["image"] === "empty") {
             echo "<p>Prix is empty</p>";
         }
         ?>
     </div>
-
-
-
 
 <button type="submit">Validate</button>
 </form>
